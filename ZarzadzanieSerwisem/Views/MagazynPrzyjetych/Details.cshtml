@@ -1,0 +1,107 @@
+﻿@model ZarzadzanieSerwisem.Models.PrzyjeteUrzadzenie
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PrzyjeteUrzadzenie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Magazynier.MagazynierImie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Magazynier.MagazynierImie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Serwisant.SerwisantImie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serwisant.SerwisantImie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusMagazynowy.StatusMagazynowyNazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusMagazynowy.StatusMagazynowyNazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusNaprawy.StatusNaprawyNazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusNaprawy.StatusNaprawyNazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieTytul)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrzyjeteUrzadzenieTytul)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieInformacje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrzyjeteUrzadzenieInformacje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieNazwaKlienta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrzyjeteUrzadzenieNazwaKlienta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieTelKontaktowy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrzyjeteUrzadzenieTelKontaktowy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrzyjeteUrzadzenieEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieDataPrzyjecia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrzyjeteUrzadzenieDataPrzyjecia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieWycena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrzyjeteUrzadzenieWycena)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PrzyjeteUrzadzenieId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

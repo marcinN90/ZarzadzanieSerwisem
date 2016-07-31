@@ -5,6 +5,24 @@ body {
 	color: #444549;
 	background: url('../img/topBG.png') 0 0 repeat-x;
 }
+.field-validation-error {
+color: #f00;
+}
+.field-validation-valid {
+display: none;
+}
+.input-validation-error {
+border: 1px solid #f00;
+background-color: #fee;
+}
+.validation-summary-errors {
+font-weight: bold;
+color: #f00;
+}
+.validation-summary-valid {
+display: none;
+}
+
 .fl {
 	float: left;
 }
@@ -73,6 +91,7 @@ div.centerContainer {
 	margin: 0 auto;
 	overflow: hidden;
 }
+
 div#leftContainer {
 	width: 360px;
 	margin-right: 50px;
@@ -404,7 +423,7 @@ div.sidebarItem {
 	-webkit-border-radius: 5px;
 	-khtml-border-radius: 5px;
 	border-radius: 5px;
-	border: 1px solid #e1e5e9;
+	
 	margin-bottom: 30px;
 }
 ul.arrowList {

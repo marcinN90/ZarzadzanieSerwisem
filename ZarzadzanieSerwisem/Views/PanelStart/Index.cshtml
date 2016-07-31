@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div id="serviceListContainer">
+    <div class="sepContainer"> </div>
+    <div class="centerContainer">
+        <div class="oneThirdCol" id="col2">
+            <img src="~/img/service2BW.png" alt="" class="fl" />
+            <h3>@Html.ActionLink("MAGAZYN", "Index", "MagazynPrzyjetych")</h3>
+            <p></p>
+            <ul>
+                <li>Zarządzanie materiałem</li>
+                <li>Dostawy</li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="oneThirdCol lastCol" id="col3">
+            <img src="~/img/service3BW.png" alt="" class="fl" />
+            <h3>@Html.ActionLink("SERWIS", "Index", "UrzadzNapr")</h3>
+            <p></p>
+            <ul>
+                <li>Wprowadzanie napraw</li>
+                <li>Statystyki</li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="oneThirdCol" id="col1">
+            <img src="~/img/service1BW.png" alt="" class="fl" />
+            <div class="centerHeadings">
+                <h3>@Html.ActionLink("Kierownictwo", "Index", "Kierownictwo") </h3>
+            </div>
+            <p></p>
+            <ul>
+                <li>Tworzenie kont pracowniczych</li>
+                <li>Zarządzanie uprawnieniami</li>
+                <li>Statystyki wydajności pracowników</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="centerContainer">
+    <div class="sepContainer"> </div>
+</div>
+<div class="centerContainer">
+    <div id="leftContainer" class="fl">
+        <h3 class="sectionTitle"> <span>Nowości</span></h3>
+        <ul id="newsList">
+            <li>
+                <span>@System.DateTime.Today.Date </span>
+                <h3><a href="#">Przyjazd RMA</a></h3>
+                <p>
+                    Przyjazd RMA - 150 laptopów do naprawy. <br />
+                    Defekt - matryca do wymiany
+                </p>
+            </li>
+
+        </ul>
+    </div>
+    <div id="rightContainer" class="fr">
+        <h3 class="sectionTitle"><span>Ważne informacje</span></h3>
+        <p>Od dnia 07.07.2016 wszystkie naprawy muszą zostać zarejestrowane w baze danych.</p>
+
+    </div>
+</div>
+<div class="blankSeparator"> </div>

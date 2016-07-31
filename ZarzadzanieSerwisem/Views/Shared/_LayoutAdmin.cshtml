@@ -11,14 +11,10 @@
     <div id="menuContainer">
         <div class="centerContainer">
             <ul id="nav">
-                <li>@Html.ActionLink("Home", "Index", "Zarzadzanie")</li>
-                <li>@Html.ActionLink("Serwisant", "Serwisant", "Zarzadzanie")</li>
-                <li>@Html.ActionLink("Magazyn", "Magazyn", "Zarzadzanie")</li>
-                <li>@Html.ActionLink("ObslugaKlienta", "ObslugaKlienta", "Zarzadzanie")</li>
-                <li>@Html.ActionLink("Admin", "Kontakt", "Start")</li>
-
-                <li><a href="contact.html">Contact Us<span>let's keep in touch</span></a></li>
-            </ul>
+                <li>@Html.ActionLink("Start", "Index", "PanelStart")</li>
+                <li>@Html.ActionLink("Dokumentacja", "Dokumentacja", "Dokumentacja")</li>
+                <li>@Html.ActionLink("Wiadomości", "Wiadomosci", "Wiadomosci")</li>
+                           </ul>
         </div>
     </div>
     @RenderBody()

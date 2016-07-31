@@ -1,0 +1,38 @@
+﻿
+<div id="breadcrumbsContainer">
+    <div class="centerContainer">
+    </div>
+</div>
+<div class="blankSeparator"> </div>
+<div class="centerContainer">
+    <div class="sidebarContainer fl">
+        <div class="sidebarItem">
+        </div>
+        <div class="sidebarItem">
+        </div>
+    </div>
+    <div id="pageContent" class="fr">
+
+        <fieldset>
+            @{
+            try
+            {
+                    WebMail.SmtpServer = "smtp.webio.pl";
+                    WebMail.SmtpPort = 587;
+
+                    WebMail.UserName = "marcin.nowak@bazanapraw.pl";
+                    WebMail.Password = "Maca2bra;";
+                    WebMail.From = Model.Email;
+
+                    WebMail.Send("90.marcin.nowak@gmail.com", "Kontakt ze strony bazanapraw.pl", Model.Name + " <br/> " + Model.Message);
+                    @:"<h2>Email został wysłany. Skontatujemy się z Tobą w przeciągu kilku dni.</h2>"
+                }
+                catch (Exception)
+                {
+                @:<b><h4>Przepraszamy, mail nie został wysłany</b></h4>
+    }
+        }
+    </fieldset>
+</div>
+</div>
+<div class="blankSeparator"> </div>

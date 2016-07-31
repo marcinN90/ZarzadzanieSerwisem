@@ -2,58 +2,79 @@
     ViewBag.Title = "Strona Startowa";
 }
 
-<div id="sliderContainer">
-    <div class="centerContainer">
-
-        <div id="mainSlider">
-            <ul>
-                <li>
-                    <img src="~/img/sliderImg1.png" alt="" class="slideImg fl" />
-                    <h1>Aplikacja dla Serwisu v 0.0</h1>
-                    <p class="sliderParagraph">Zarządzanie serwisem - Magazyn, Panel Serwisanta Panel Admina, Panel Biuro Obsługi Klienta</p>
-
-                    <a class="darkButton fl">Kup Teraz! <img src="~/img/darkButtonImg.png" alt="" /></a>
-                    <p class="additionalOptions fl">lub <a href="#">dowiedz się więcej</a></p>
-                </li>
-
-            </ul>
-        </div>
+<div class="centerContainer">
+    <div id="leftContainer" class="fl">
+        <h3 class="sectionTitle"> <span>STATUS</span></h3>
+        <ul id="newsList">
+            <li>
+                <b> 28.06.2016 - Rozpoczęcie prac na projektem.</b><br />
+            </li>
+            <li>
+                <b> Technologie wykorzystane w projekcie: </b><br />
+                ASP.NET MVC (<font color="green"> zrobione</font>)<br />
+                Entity Framework (<font color="green"> zrobione</font>) <br />
+                Testy jednostkowe (<font color="blue"> w trakcie nauki / realizacji</font>)<br />
+                AngularJS (<font color="blue"> w trakcie nauki / realizacji</font>)<br />
+                Kontrola wersji (<font color="blue"> w trakcie nauki / realizacji - GitHub</font>)<br />
+                Bootstrap (<font color="red"> do zrobienia</font>)<br />
+            </li>
+            <li>
+                <b>Funkcjonalności</b><br/>
+                Strona Główna(<font color="green"> zrobione</font>)<br />
+                Panel Magazyniera (<font color="green"> zrobione / do usprawnienia</font>):<br />
+                Panel Serwisanta (<font color="green"> zrobione / do usprawnienia</font>)<br />
+                Zarządzanie treścią(<font color="red"> do zrobienia | WAŻNE</font>)<br />
+                Panel Kierownika (<font color="red"> do zrobienia</font>)<br />
+                Dokumentacja Serwisu (<font color="red"> do zrobienia</font>)<br />
+                Wysyłanie wiadomości wewnątrz serwisu (<font color="red"> do zrobienia</font>)<br />
+                            </li>
+        </ul>
+    </div>
+    <div id="rightContainer" class="fr">
+        <h3 class="sectionTitle"><span>INFORMACJE</span></h3>
+        <p>Aplikacja do zarządzania serwisem - dla serwisu komputerowego, urządzeń rtv, telefonów komórkowych itp. Stworzona przez pracownika (później kierownika) serwisu z kilkuletnim doświadczeniem w branży.</p>
+       <p>Główny cel to zapoznanie się z technologią ASP.NET oraz stworzenie w pełni fukncjonalnej aplikacji do zarządzania serwisem.<br/>
+        Funkcje, które są mniej istotne ale które również chcę dodać do aplikacji to: logowanie użytkowników, przyznawanie uprawnień użytkownikow, system zarządzania treścią (np. krótkie informacje dla pracowników) dokumentacja serwisowa online oraz statystyki.</p>        
+        
+        <p> Kod dostępny na <a href="https://github.com/marcinN90/ZarzadzanieSerwisem">https://github.com/marcinN90/ZarzadzanieSerwisem</a></p>
+        <p> Jeśli chcesz się ze mna skontaktować przejdź do zakładki <a href="kontakt">kontakt</a> i wyślij wiadomość.</p>
 
     </div>
 </div>
+
 <div class="blankSeparator"> </div>
 <div id="serviceListContainer">
     <div class="centerContainer">
         <div class="oneThirdCol" id="col1">
             <img src="~/img/service1BW.png" alt="" class="fl" />
             <div class="centerHeadings">
-                <h3>Pogotowie Komputerowe </h3>
+                <h3>Zarządzanie Serwisem </h3>
             </div>
-            <p>Naprawa, usuwanie wirusów, poprawa wydajności</p>
+            <p>Aplikacja do zarządzania serwisem online</p>
             <ul>
-                <li>Naprawa usterek</li>
-                <li>Dojazd do klienta</li>
-                <li>Instalacja oprogramowania</li>
+                <li>Instalacja na firmowej domenie</li>
+                <li>Połączenie ze stroną firmową</li>
+                <li>Możliwość dostosowania do potrzeb klienta</li>
             </ul>
         </div>
         <div class="oneThirdCol" id="col2">
             <img src="~/img/service2BW.png" alt="" class="fl" />
-            <h3>Szkolenia z zakresu obsługi komputera</h3>
-            <p>Przeglądanie internetu, poczta itp.</p>
+            <h3>Serwis, Magazyn, Obsługa Klienta</h3>
+            <p>Wszystko w jednym miejscu.</p>
             <ul>
-                <li>Idealne dla osób starszych </li>
-                <li>Dojazd do klienta</li>
-                <li>Indywidualne podejście</li>
+                <li>Rejestrowanie przyjętego urządzenia </li>
+                <li>Rejestrowanie Naprawy</li>
+                <li>Panel pracownika Obsługi Klienta</li>
             </ul>
         </div>
         <div class="oneThirdCol lastCol" id="col3">
             <img src="~/img/service3BW.png" alt="" class="fl" />
-            <h3>Sieci komputerowe</h3>
-            <p>Instalacja, Administracja</p>
+            <h3>Specjalny panel dla szefa / kierownika</h3>
+            <p>Statystyki pracowników</p>
             <ul>
-                <li>Da firm oraz osób prywatnych</li>
-                <li>Opieka nad system informatycznym firmy</li>
-                <li>Projektowanie sieci wewnątrz firmy / w domu</li>
+                <li>Dzienne / Tygodniowe / Miesięczne</li>
+                <li>Szczegółowe informacje na temat pracownika</li>
+                <li>Statystyki serwisu / magazynu</li>
             </ul>
         </div>
     </div>
@@ -62,23 +83,6 @@
     <div class="sepContainer"> </div>
 </div>
 <div class="centerContainer">
-    <div id="leftContainer" class="fl">
-        <h3 class="sectionTitle"> <span>Nowości</span></h3>
-        <ul id="newsList">
-            <li>
-                <span>28.06.2016</span>
-                <h3><a href="#">Start projektu</a></h3>
-                <p>Rozpoczęcie prac nad projektem 'Aplikacja do zarządzania serwisem'. </p>
-                <a href="#" class="readMoreLink">Czytaj więcej</a>
-            </li>
-          
-        </ul>
-    </div>
-    <div id="rightContainer" class="fr">
-        <h3 class="sectionTitle"><span>Rozlicznie</span></h3>
-        <p>Wszystkie usługi rozliczane są na podstawie umowy o dzieło bądź umowy zlecenie.</p>
-       
-       
-    </div>
+
 </div>
 <div class="blankSeparator"> </div>

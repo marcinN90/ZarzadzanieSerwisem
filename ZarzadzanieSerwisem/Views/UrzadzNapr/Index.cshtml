@@ -1,0 +1,100 @@
+﻿@model IEnumerable<ZarzadzanieSerwisem.Models.UrzadzNapr>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenie.PrzyjeteUrzadzenieTytul)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Serwisant.SerwisantImie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusNaprawy.StatusNaprawyNazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrzadzNaprDataWpisu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usterka1Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usterka2Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrzadzNaprPozycja1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrzadzNaprPozycja2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrzadzNaprPozycja3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrzadzNaprPozycja4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrzadzNaprBrakujacaCzesc1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrzadzNaprBrakujacaCzesc2)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrzyjeteUrzadzenie.PrzyjeteUrzadzenieTytul)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Serwisant.SerwisantImie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusNaprawy.StatusNaprawyNazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrzadzNaprDataWpisu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usterka1Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usterka2Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrzadzNaprPozycja1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrzadzNaprPozycja2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrzadzNaprPozycja3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrzadzNaprPozycja4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrzadzNaprBrakujacaCzesc1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrzadzNaprBrakujacaCzesc2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UrzadzNaprId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UrzadzNaprId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UrzadzNaprId })
+        </td>
+    </tr>
+}
+
+</table>

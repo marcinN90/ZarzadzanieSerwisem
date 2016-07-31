@@ -42,6 +42,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="sql" Order="1">
+          <Destination Path="Data Source=mssql.webio.pl,2401%3bDatabase=fixnet_bazanapraw%3bUid=fixnet_bazanapraw%3bPassword=Bazanapraw%3b1%3b" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=%28localdb%29\MSSQLLocalDB%3bInitial Catalog=aspnet-ZarzadzanieSerwisem-20160627102149%3bIntegrated Security=True%3bConnect Timeout=30%3bEncrypt=False%3bTrustServerCertificate=True%3bApplicationIntent=ReadWrite%3bMultiSubnetFailover=False" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Release\AutoScripts\sql_SchemaAndData.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -165,17 +176,24 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\MagazynController.cs" />
+    <Compile Include="Controllers\KierownictwoController.cs" />
+    <Compile Include="Controllers\MagazynPrzyjetychController.cs" />
+    <Compile Include="Controllers\PanelStartController.cs" />
     <Compile Include="Controllers\StartController.cs" />
+    <Compile Include="Controllers\UrzadzNaprController.cs" />
     <Compile Include="DAL\Initializer.cs" />
     <Compile Include="DAL\SerwisContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmailForm.cs" />
     <Compile Include="Models\Magazynier.cs" />
     <Compile Include="Models\PrzyjeteUrzadzenie.cs" />
     <Compile Include="Models\Serwisant.cs" />
+    <Compile Include="Models\StatusMagazynowy.cs" />
+    <Compile Include="Models\StatusNaprawy.cs" />
     <Compile Include="Models\UrzadzNapr.cs" />
+    <Compile Include="Models\Usterka.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -280,6 +298,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\bazanapraw.pl - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -333,11 +352,20 @@
     <Content Include="Views\Start\StatusNaprawy.cshtml" />
     <Content Include="Views\Start\Kontakt.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
-    <Content Include="Views\Magazyn\Create.cshtml" />
-    <Content Include="Views\Magazyn\Delete.cshtml" />
-    <Content Include="Views\Magazyn\Details.cshtml" />
-    <Content Include="Views\Magazyn\Edit.cshtml" />
-    <Content Include="Views\Magazyn\Index.cshtml" />
+    <Content Include="Views\MagazynPrzyjetych\Create.cshtml" />
+    <Content Include="Views\MagazynPrzyjetych\Delete.cshtml" />
+    <Content Include="Views\MagazynPrzyjetych\Details.cshtml" />
+    <Content Include="Views\MagazynPrzyjetych\Edit.cshtml" />
+    <Content Include="Views\MagazynPrzyjetych\Index.cshtml" />
+    <Content Include="Views\UrzadzNapr\Create.cshtml" />
+    <Content Include="Views\UrzadzNapr\Delete.cshtml" />
+    <Content Include="Views\UrzadzNapr\Details.cshtml" />
+    <Content Include="Views\UrzadzNapr\Edit.cshtml" />
+    <Content Include="Views\UrzadzNapr\Index.cshtml" />
+    <Content Include="Views\Start\WyslanoEmail.cshtml" />
+    <Content Include="Views\PanelStart\Index.cshtml" />
+    <Content Include="Views\PanelStart\Index - Copy.cshtml" />
+    <Content Include="Views\Kierownictwo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

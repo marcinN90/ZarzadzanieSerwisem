@@ -1,64 +1,38 @@
-﻿<div id="breadcrumbsContainer">
+﻿@model ZarzadzanieSerwisem.Models.EmailForm
+
+<div id="breadcrumbsContainer">
     <div class="centerContainer">
-        <p>You are here: <a href="index.html">Home</a> &nbsp;/&nbsp; <strong>Contact Us</strong> </p>
     </div>
 </div>
 <div class="blankSeparator"> </div>
 <div class="centerContainer">
     <div class="sidebarContainer fl">
         <div class="sidebarItem">
-            <div class="sidebarHeader">
-                <h3>Corpora Contact Information</h3>
-            </div>
-            <ul class="basicList">
-                <li>
-                    <p>Insert your address here</p>
-                    <p>Address Line 2</p>
-                </li>
-                <li>
-                    <p>Insert your phone number here</p>
-                </li>
-                <li class="noBottomBorder">
-                    <p>Insert your email address here</p>
-                </li>
-            </ul>
         </div>
         <div class="sidebarItem">
-            <div class="sidebarHeader">
-                <h3>Driving Directions</h3>
-            </div>
-            <div class="sidebarGeneral">
-                <iframe width="244" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;ll=45.504422,-107.896729&amp;spn=0.384991,0.667419&amp;z=9&amp;output=embed"></iframe>
-                <br />
-                <small><a href="#" style="text-align:left">View Larger Map</a></small>
-            </div>
         </div>
     </div>
-    <div id="pageContent" class="fr">
-        <img src="~/img/contactPageImg.png" alt="" />
-        <p>To contact us, use the information on the left sidebar or simply fill our the form below to send us a message. All fields are required.</p>
-        <p>We’ll get back to you as soon as possible. Pinky swear!</p>
+    <div id="pageContent" class="fr"><h4>Formularz Kontaktowy</h4>
         <div class="sepContainer"> </div>
-        <form action="#" method="post" id="contactForm">
-            <fieldset>
+        <fieldset>
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "contactForm" }))
+            {
+                @Html.ValidationSummary()
                 <p class="oneHalfCol">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" />
+                    <label for="Imie i Nazwisko">Imię i Nazwisko: @Html.TextBoxFor(x => x.Name) </label>
                 </p>
                 <p class="oneHalfCol">
-                    <label for="email">Your Email Address</label>
-                    <input type="text" id="email" />
+                    <label for="Email">Email: @Html.TextBoxFor(x => x.Email) </label>
                 </p>
                 <div class="cl"> </div>
-                <p>
-                    <label for="message">Your Message</label>
-                    <textarea id="message" cols="10" rows="10"></textarea>
-                </p>
-                <div class="blankSeparator"> </div>
-                <a class="redButton fl">Send Message</a>
-                <p class="additionalOptions fl">or <a href="#">Reset Form</a></p>
-            </fieldset>
-        </form>
+                    <p>
+                        <label for="wiadomosc">Wiadomość:</label>
+                        @Html.TextBoxFor(x => x.Message)
+                    </p>
+                    <div class="blankSeparator"> </div>
+                    <input type="submit" value="Wyślij" />
+            }
+        </fieldset>
     </div>
 </div>
 <div class="blankSeparator"> </div>

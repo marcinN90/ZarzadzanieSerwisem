@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ZarzadzanieSerwisem.Models;
 
 namespace ZarzadzanieSerwisem.Controllers
 {
@@ -23,9 +24,26 @@ namespace ZarzadzanieSerwisem.Controllers
         {
             return View();
         }
+
+        [HttpGet]
         public ActionResult Kontakt()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Kontakt(EmailForm emailForm)
+        {
+            if (ModelState.IsValid)
+            {
+                //do zrobienia wyślij maila do admina
+                return View("WyslanoEmail", emailForm);
+            }
+            else
+            {
+                return View();
+            }
+           
         }
 
     }

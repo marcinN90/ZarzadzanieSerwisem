@@ -8,33 +8,54 @@ namespace ZarzadzanieSerwisem.Models
 {
     public class UrzadzNapr
     {
-        // trzeba dodać serwisantId oraz PrzeyjeteUrzadzenieID - poszukac w necie rozwiazania problemu
-        [Display(Name = "Status")]
-        public string UrzadzNaprStatus { get; set; }
+        [Display(Name ="Wpis nr:")]
+        public int UrzadzNaprId { get; set; }
 
+        [Display(Name = "Urzadzenie Naprawiane")]
+        public int PrzyjeteUrzadzenieId { get; set; }
+
+        [Display(Name = "Data Wpisu")]
+        [DataType(DataType.Text)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        public System.DateTime UrzadzNaprDataWpisu { get; set; }
+
+        [Display(Name = "Status")]
+        public int StatusNaprawyId { get; set; }
+
+        [Display(Name = "Serwisant:")]
+        public int SerwisantId { get; set; }
+        
         [Display(Name ="Naprawiana Usterka 1:")]
-        public string UrzadzNaprUsterka1 { get; set; } // można się zastanowić czy nie zrobić osobnej tabelki tylko typów usterek
+        public int Usterka1Id { get; set; } 
 
         [Display(Name = "Naprawiana Usterka 2:")]
-        public string UrzadzNaprUsterka2 { get; set; } // można się zastanowić czy nie zrobić osobnej tabelki tylko typów usterek
+        public int Usterka2Id { get; set; }
 
-        [Display(Name = "Naprawiony Defekt 1:"]
-        public string UrzadzNaprDefekt1 { get; set; }
+        [Display(Name = "Pozycja 1:")]
+        public string UrzadzNaprPozycja1 { get; set; }
 
-        [Display(Name = "Naprawiony Defekt 2:"]
-        public string UrzadzNaprDefekt2 { get; set; }
+        [Display(Name = "Pozycja 2:")]
+        public string UrzadzNaprPozycja2 { get; set; }
 
-        [Display(Name = "Naprawiony Defekt 3:"]
-        public string UrzadzNaprDefekt3 { get; set; }
+        [Display(Name = "Pozycja 3:")]
+        public string UrzadzNaprPozycja3 { get; set; }
 
-        [Display(Name = "Naprawiony Defekt 4:"]
-        public string UrzadzNaprDefekt4 { get; set; }
+        [Display(Name = "Pozycja 4:")]
+        public string UrzadzNaprPozycja4 { get; set; }
 
-        //Brakujaca Czesc 1
+        [Display(Name = "Brakująca część 1:")]
+        public string UrzadzNaprBrakujacaCzesc1 { get; set; }
 
-        //Brakujaca Czesc 2
+        [Display(Name = "Brakująca część 2:")]
+        public string UrzadzNaprBrakujacaCzesc2 { get; set; }
 
+        public virtual Usterka Usterka { get; set; }
 
+        public virtual StatusNaprawy StatusNaprawy { get; set; }
+
+        public virtual PrzyjeteUrzadzenie PrzyjeteUrzadzenie { get; set; }
+
+        public virtual Serwisant Serwisant { get; set; }
 
 
     }

@@ -1,0 +1,105 @@
+﻿@model IEnumerable<ZarzadzanieSerwisem.Models.PrzyjeteUrzadzenie>
+
+@{
+    ViewBag.Title = "Przyjęte Urządzenia - spis";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Akcja:
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieTytul)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieInformacje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieNazwaKlienta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieTelKontaktowy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieDataPrzyjecia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusMagazynowy.StatusMagazynowyNazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Magazynier.MagazynierPelnaNazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusNaprawy.StatusNaprawyNazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenieWycena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Serwisant.SerwisantPelnaNazwa)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PrzyjeteUrzadzenieId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PrzyjeteUrzadzenieId })|
+                @Html.ActionLink("Delete", "Delete", new { id = item.PrzyjeteUrzadzenieId })
+            </td>
+            <td width="60">
+                @Html.DisplayFor(modelItem => item.PrzyjeteUrzadzenieId)
+            </td>
+            <td width="100">
+                @Html.DisplayFor(modelItem => item.PrzyjeteUrzadzenieTytul)
+            </td>
+            <td width="350">
+                @Html.DisplayFor(modelItem => item.PrzyjeteUrzadzenieInformacje)
+            </td>
+            <td width="150">
+                @Html.DisplayFor(modelItem => item.PrzyjeteUrzadzenieNazwaKlienta)
+            </td>
+            <td width="100">
+                @Html.DisplayFor(modelItem => item.PrzyjeteUrzadzenieTelKontaktowy)
+            </td>
+            <td width="150">
+                @Html.DisplayFor(modelItem => item.PrzyjeteUrzadzenieEmail)
+            </td>
+            <td width="70">
+                @Html.DisplayFor(modelItem => item.PrzyjeteUrzadzenieDataPrzyjecia)
+            </td>
+            <td width="150">
+                @Html.DisplayFor(modelItem => item.StatusMagazynowy.StatusMagazynowyNazwa)
+            </td>
+            <td width="100">
+                @Html.DisplayFor(modelItem => item.Magazynier.MagazynierPelnaNazwa)
+            </td>
+            <td width="200">
+                @Html.DisplayFor(modelItem => item.StatusNaprawy.StatusNaprawyNazwa)
+            </td>
+            <td width="50">
+                @Html.DisplayFor(modelItem => item.PrzyjeteUrzadzenieWycena)
+            </td>
+            <td width="100">
+                @Html.DisplayFor(modelItem => item.Serwisant.SerwisantPelnaNazwa)
+            </td>
+          
+        </tr>
+    }
+
+</table>

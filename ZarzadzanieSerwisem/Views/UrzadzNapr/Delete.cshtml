@@ -1,0 +1,121 @@
+﻿@model ZarzadzanieSerwisem.Models.UrzadzNapr
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UrzadzNapr</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrzyjeteUrzadzenie.PrzyjeteUrzadzenieTytul)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrzyjeteUrzadzenie.PrzyjeteUrzadzenieTytul)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Serwisant.SerwisantImie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serwisant.SerwisantImie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusNaprawy.StatusNaprawyNazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusNaprawy.StatusNaprawyNazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrzadzNaprDataWpisu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrzadzNaprDataWpisu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usterka1Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usterka1Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usterka2Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usterka2Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrzadzNaprPozycja1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrzadzNaprPozycja1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrzadzNaprPozycja2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrzadzNaprPozycja2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrzadzNaprPozycja3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrzadzNaprPozycja3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrzadzNaprPozycja4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrzadzNaprPozycja4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrzadzNaprBrakujacaCzesc1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrzadzNaprBrakujacaCzesc1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrzadzNaprBrakujacaCzesc2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrzadzNaprBrakujacaCzesc2)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
