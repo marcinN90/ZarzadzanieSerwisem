@@ -1,0 +1,146 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutDok.cshtml";
+}
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuDokumentacja">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" @Html.ActionLink("Panel Główny", "Index", "PanelStart")
+        </div>
+        <div class="collapse navbar-collapse" id="menuDokumentacja">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Dokumentacja", "Index", "Dokumentacja");</li>
+            </ul>
+            <form class="navbar-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" />
+                </div>
+                <buttont typeof="submit" class="btn btn-default">Szukaj</buttont>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+
+    <!--Tytuł-->
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="page-header">
+                Nazwa Firmy
+                <small>Dokumentacja</small>
+            </h1>
+        </div>
+    </div>
+    <!--/.row-->
+    <!--Kategorie Wyboru-->
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>
+                Dokumentacja dostarczona przez firmy zewnętrzne.
+                <small>Schematy połączeń, specyfikacje komponentów oraz inne.</small>
+            </h3>
+        </div>
+        <div class="col-md-4">
+            <h4>Wybierz Producenta</h4>
+            <p>
+                <a href="@Url.Action("Producent", "Dokumentacja", new { @id = "SONY" })" class="btn btn-primary">
+                    Sony <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </p>
+            <p>
+                <a href="@Url.Action("Producent", "Dokumentacja", new { @id = "SONY" })" class="btn btn-primary">
+                    HP <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </p>
+            <p>
+                <a href="@Url.Action("Producent", "Dokumentacja", new { @id = "SONY" })" class="btn btn-primary">
+                    Samsung <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </p>
+            <p>
+                <a href="@Url.Action("Producent", "Dokumentacja", new { @id = "SONY" })" class="btn btn-primary">
+                    MSI <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </p>
+        </div>
+
+        <div class="col-md-4">
+            <h4> Typ Produktu</h4>
+            <p>
+                <a href="@Url.Action("Producent", "Dokumentacja", new { @id = "SONY" })" class="btn btn-success">
+                    Laptopy <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </p>
+            <p>
+                <a href="@Url.Action("Producent", "Dokumentacja", new { @id = "SONY" })" class="btn btn-success">
+                    Telefony <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </p>
+            <p>
+                <a href="@Url.Action("Producent", "Dokumentacja", new { @id = "SONY" })" class="btn btn-success">
+                    Płyty Główne <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </p>
+            <p>
+                <a href="@Url.Action("Producent", "Dokumentacja", new { @id = "SONY" })" class="btn btn-success">
+                    Karty Graficzne <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+    <!--/.row-->
+    <hr/>
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Dokumentacja wewnętrzna 
+               <small>Instrukcje, szkolenia, wzory dokumentów oraz inne.</small></h3>
+        </div>
+        <div class="col-lg-4">
+            <h4>Szkolenia</h4>
+            <p>
+                <a href="@Url.Action("Kategoria", "Dokumentacja", new {@id = "Stanowiskowe"})" class="btn btn-info">Obsługa Narzędzi / Maszyn <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+            </p>
+            <p>
+                <a href="@Url.Action("Kategoria", "Dokumentacja", new {@id = "Stanowiskowe"})" class="btn btn-info">BHP <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+            </p>
+            <p>
+                <a href="@Url.Action("Kategoria", "Dokumentacja", new {@id = "Stanowiskowe"})" class="btn btn-info">Podnoszenie Kwalifikacji <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+            </p>
+        </div>
+
+        <div class="col-lg-4">
+            <h4>Instrukcje</h4>
+            <p>
+                <a href="@Url.Action("Kategoria", "Dokumentacja", new {@id = "Stanowiskowe"})" class="btn btn-info">Stanowiskowe <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+            </p>
+            <p>
+                <a href="@Url.Action("Kategoria", "Dokumentacja", new {@id = "Stanowiskowe"})" class="btn btn-info">Rework <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+            </p>
+            <p>
+                <a href="@Url.Action("Kategoria", "Dokumentacja", new {@id = "Stanowiskowe"})" class="btn btn-info">Procedury <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+            </p>
+        </div>
+
+        <div class="col-lg-4">
+            <h4>Wzory Dokumentów</h4>
+            <p>
+                <a href="@Url.Action("Kategoria", "Dokumentacja", new {@id = "Stanowiskowe"})" class="btn btn-info">Magazyn / Serwis <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+            </p>
+            <p>
+                <a href="@Url.Action("Kategoria", "Dokumentacja", new {@id = "Stanowiskowe"})" class="btn btn-info">Zasoby Ludzkie <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+            </p>
+            <p>
+                <a href="@Url.Action("Kategoria", "Dokumentacja", new {@id = "Stanowiskowe"})" class="btn btn-info">Inne <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+            </p>
+        </div>
+    </div>
+    <!--/.row-->
+</div>
+

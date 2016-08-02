@@ -176,6 +176,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DokumentacjaController.cs" />
     <Compile Include="Controllers\KierownictwoController.cs" />
     <Compile Include="Controllers\MagazynPrzyjetychController.cs" />
     <Compile Include="Controllers\PanelStartController.cs" />
@@ -198,7 +199,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\bottomPatternDark.png" />
     <Content Include="img\bottomPatternLight.png" />
     <Content Include="img\breadcrumbsBG.png" />
@@ -294,12 +298,19 @@
     <Content Include="Content\master.css" />
     <Content Include="Content\reset.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\bazanapraw.pl - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -366,14 +377,13 @@
     <Content Include="Views\PanelStart\Index.cshtml" />
     <Content Include="Views\PanelStart\Index - Copy.cshtml" />
     <Content Include="Views\Kierownictwo\Index.cshtml" />
+    <Content Include="Views\Dokumentacja\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutDok.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

@@ -4,28 +4,26 @@
     <title>@ViewBag.Title - Admin - Zarzadzanie Serwisem versja 0.0</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     @Styles.Render("~/Content/css")
-
 </head>
 <body>
-
     <div id="menuContainer">
         <div class="centerContainer">
             <ul id="nav">
-                <li>@Html.ActionLink("Start", "Index", "PanelStart")</li>
-                <li>@Html.ActionLink("Dokumentacja", "Dokumentacja", "Dokumentacja")</li>
-                <li>@Html.ActionLink("Wiadomości", "Wiadomosci", "Wiadomosci")</li>
-                           </ul>
+                <li>@Html.ActionLink("BazaNapraw.pl", "Index", "Start")</li>
+                <li>@Html.ActionLink("Panel Główny", "Index", "PanelStart")</li>
+                <li>@Html.ActionLink("Dokumentacja", "Index", "Dokumentacja")</li>
+
+            </ul>
         </div>
     </div>
-    @RenderBody()
-    <div id="footerContainer">
-       
-    </div>
 
+    @RenderBody()
+
+    <div id="footerContainer">
+    </div>
     <div id="footerCopyrightContainer">
         <div class="centerContainer">
-            <p class="fl">&copy; Copyright 2016 FixNet.pl. All rights reserved. </p>
-           
+            <p class="fl">&copy; Copyright 2016 All rights reserved. </p>
         </div>
     </div>
     <script type="text/javascript">Cufon.now();</script>
