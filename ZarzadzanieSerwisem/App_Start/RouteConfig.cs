@@ -18,8 +18,6 @@ namespace ZarzadzanieSerwisem
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Start", action = "Index", id = UrlParameter.Optional }
             );
-
-
         }
     }
 }

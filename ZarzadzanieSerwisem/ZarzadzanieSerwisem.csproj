@@ -187,7 +187,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Dokument.cs" />
     <Compile Include="Models\EmailForm.cs" />
+    <Compile Include="Models\Kategoria.cs" />
     <Compile Include="Models\Magazynier.cs" />
     <Compile Include="Models\PrzyjeteUrzadzenie.cs" />
     <Compile Include="Models\Serwisant.cs" />
@@ -379,6 +381,26 @@
     <Content Include="Views\Kierownictwo\Index.cshtml" />
     <Content Include="Views\Dokumentacja\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutDok.cshtml" />
+    <Content Include="Views\Dokumentacja\Kategoria.cshtml" />
+    <None Include="Src\PDF\Laptop HP model HP421.pdf" />
+    <Content Include="Src\PDF\Laptop HP model HP422.pdf" />
+    <Content Include="Src\PDF\Laptop HP model HP423.pdf" />
+    <Content Include="Src\PDF\Laptop HP model HP424.pdf" />
+    <Content Include="Src\PDF\Laptop HP model HP425.pdf" />
+    <Content Include="Src\PDF\Laptop HP model HP426.pdf" />
+    <Content Include="Src\PDF\Laptop HP model HP427.pdf" />
+    <Content Include="Src\PDF\Laptop HP model HP428.pdf" />
+    <Content Include="Src\PDF\Laptop Samsung model sa421.pdf" />
+    <Content Include="Src\PDF\Laptop Samsung model sa422.pdf" />
+    <Content Include="Src\PDF\Laptop Samsung model sa423.pdf" />
+    <Content Include="Src\PDF\Laptop Sony model so421.pdf" />
+    <Content Include="Src\PDF\Laptop Sony model so422.pdf" />
+    <Content Include="Src\PDF\Laptop Sony model so423.pdf" />
+    <Content Include="Src\PDF\Laptop Toshiba model to421.pdf" />
+    <Content Include="Src\PDF\Laptop Toshiba model to422.pdf" />
+    <Content Include="Src\PDF\Laptop Toshiba model to423.pdf" />
+    <Content Include="Src\PDF\Laptop Toshiba model to424.pdf" />
+    <Content Include="Views\Dokumentacja\Download.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

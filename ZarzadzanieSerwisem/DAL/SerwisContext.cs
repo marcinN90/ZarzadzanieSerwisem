@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Web;
 using ZarzadzanieSerwisem.Models;
 
 namespace ZarzadzanieSerwisem.DAL
@@ -21,6 +17,10 @@ namespace ZarzadzanieSerwisem.DAL
         public DbSet<StatusMagazynowy> StatusMagazynowy { get; set; }
         public DbSet<Usterka> Usterka { get; set; }
         public DbSet<UrzadzNapr> UrzadzNapr { get; set; }  
+        public DbSet<Dokument> Dokument { get; set; }
+        public DbSet<Kategoria> Kategoria { get; set; }
+      
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Potrzebne dla klas Identity

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ZarzadzanieSerwisem.Models.Dokument>
+@{
+    ViewBag.Title = "Kategoria";
+    Layout = "~/Views/Shared/_LayoutDok.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <h2>
+            Dokumentacja do pobrania
+        </h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            @foreach (var item in Model)
+            {
+                //Generowanie adresu do pobrania
+                //Usuwamy .pdf a nazwy pliku a następnie doklejamy w metodzie Download
+                // spowodowane routingiem
+                //TO DO - zmienić routing tak, by w adresie mogła pojawić się kropka
+                int dlugosc = @item.Tytul.Length;
+                <p>
+                    <a href="@Url.Action("Download", "Dokumentacja", new { id = (item.Tytul).Substring(0, dlugosc -4) })">@item.Tytul</a>
+                </p>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

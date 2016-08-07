@@ -18,6 +18,41 @@ namespace ZarzadzanieSerwisem.DAL
         private void SeedPrzyjeteUrzadzenieData(SerwisContext context)
         {
 
+            var KategoriaInit = new List<Kategoria>
+            {
+                new Kategoria() {KategoriaId = 1, KategoriaTytul = "Sony" },
+                new Kategoria() {KategoriaId = 2, KategoriaTytul = "HP" },
+                new Kategoria() {KategoriaId = 3, KategoriaTytul = "Samsung" },
+                new Kategoria() {KategoriaId = 4, KategoriaTytul = "Toshiba" },
+            };
+            KategoriaInit.ForEach(i => context.Kategoria.Add(i));
+
+
+
+            var DokumentInit = new List<Dokument>
+            {
+                new Dokument() {DokumentId = 1, Tytul = "Laptop Sony model so421", KategoriaId = 1  },
+                new Dokument() {DokumentId = 2, Tytul = "Laptop Sony model so422", KategoriaId = 1  },
+                new Dokument() {DokumentId = 3, Tytul = "Laptop Sony model so423", KategoriaId = 1 },
+                new Dokument() {DokumentId = 4, Tytul = "Laptop HP model HP421", KategoriaId = 2  },
+                new Dokument() {DokumentId = 5, Tytul = "Laptop HP model HP422", KategoriaId = 2 },
+                new Dokument() {DokumentId = 6, Tytul = "Laptop HP model HP423", KategoriaId = 2  },
+                new Dokument() {DokumentId = 7, Tytul = "Laptop HP model HP424", KategoriaId = 2  },
+                new Dokument() {DokumentId = 8, Tytul = "Laptop HP model HP425", KategoriaId = 2 },
+                new Dokument() {DokumentId = 9, Tytul = "Laptop HP model HP426", KategoriaId = 2  },
+                new Dokument() {DokumentId = 10, Tytul = "Laptop HP model HP427", KategoriaId = 2 },
+                new Dokument() {DokumentId = 11, Tytul = "Laptop HP model HP428", KategoriaId = 2  },
+                new Dokument() {DokumentId = 12, Tytul = "Laptop Samsung model so421", KategoriaId = 3  },
+                new Dokument() {DokumentId = 13, Tytul = "Laptop Samsung model so422", KategoriaId = 3 },
+                new Dokument() {DokumentId = 14, Tytul = "Laptop Samsung model sa423", KategoriaId = 3  },
+                new Dokument() {DokumentId = 15, Tytul = "Laptop Toshiba model to421", KategoriaId = 4 },
+                new Dokument() {DokumentId = 16, Tytul = "Laptop Toshiba model to422", KategoriaId = 4 },
+                new Dokument() {DokumentId = 17, Tytul = "Laptop Toshiba model to423", KategoriaId = 4 },
+                new Dokument() {DokumentId = 18, Tytul = "Laptop Toshiba model to424", KategoriaId = 4 },
+
+            };
+            DokumentInit.ForEach(i => context.Dokument.Add(i));
+
             var Magazynierzy = new List<Magazynier>
             {
                 new Magazynier() {MagazynierId = 1, MagazynierImie = "Daniel", MagazynierNazwisko= "Fabiański" },
